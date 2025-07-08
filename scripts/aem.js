@@ -414,8 +414,9 @@ function decorateButtons(element) {
       const twoup = a.parentElement.parentElement;
       if (!a.querySelector('img')) {
         if (up.childNodes.length === 1 && (up.tagName === 'P' || up.tagName === 'DIV')) {
-          a.className = 'button'; // default
-          up.classList.add('button-container');
+          // CUSTOM FOR ROBINHOOD, comment out so header does not render list as BUTTONS
+          //a.className = 'button'; // default
+          //up.classList.add('button-container');
         }
         if (
           up.childNodes.length === 1
