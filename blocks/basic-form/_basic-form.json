@@ -1,8 +1,8 @@
 {
   "definitions": [
     {
-      "title": "Form",
-      "id": "form",
+      "title": "Basic Form",
+      "id": "basic-form",
       "plugins": {
         "xwalk": {
           "page": {
@@ -18,13 +18,13 @@
   ],
   "models": [
     {
-      "id": "form",
+      "id": "basic-form",
       "fields": [
         {
           "component": "text",
           "valueType": "string",
           "name": "text-one",
-          "label": "Input One",
+          "label": "Input One1",
           "value": ""
         },
         {

@@ -158,6 +158,24 @@
           }
         },
         {
+          "title": "Social Media",
+          "id": "social-media",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Social Media",
+                  "model": "social-media",
+                  "instagram_icon": ":instagram:",
+                  "facebook_icon": ":facebook:",
+                  "twitter_icon": ":twitter:"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Basic Form",
           "id": "basic-form",
           "plugins": {
