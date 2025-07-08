@@ -9,6 +9,7 @@ export default async function decorate(block) {
     const anchorTag = child.querySelector('a');
     const parentDivTag = child.querySelector('div');
     parentDivTag.classList.add('crazy-hippo0');
+    console.log('inside social-media');
     if (anchorTag.querySelector('span')) {
       // do not do anything since span already inside anchor in doc-based
     } else {

@@ -30,3 +30,26 @@ footer .wrapper .section.social-media-container img {
     padding: 0.5em 0.5em 0.2em;
   }
 }
+/* CUSTOM FOR ROBINHOOD */
+footer span.icon {
+    height: 60px !important;
+    width: 60px !important;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    border: 0 solid transparent;
+    text-transform: uppercase;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 0;
+    transform: translateZ(0);
+
+    z-index: 2;
+    border-radius: 50%;
+}
+footer span.icon:not(:last-child) {
+    margin-right: 20px;
+}

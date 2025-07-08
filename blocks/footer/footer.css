@@ -94,6 +94,9 @@ footer div>p {
   letter-spacing: 0;
   margin-top: 1em !important;
 }
+footer .columns-wrapper .columns-2-cols div:first-child {
+  display: flex;
+}
 footer .columns-wrapper div {
   align-self: flex-start;
 }
