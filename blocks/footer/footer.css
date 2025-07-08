@@ -120,7 +120,7 @@ footer span.icon {
     z-index: 2;
     border-radius: 50%;
 }
-footer span.icon:not(:last-child) {
+footer span.icon {
     margin-right: 20px;
 }
 footer .columns-2-cols div:first-child>div:last-child {

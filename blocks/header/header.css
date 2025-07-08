@@ -270,7 +270,7 @@ header nav .nav-tools {
 /* CUSTOM FOR ROBINHOOD */
 header .nav-wrapper {
   width: 100%;
-  max-width: 99%;
+  max-width: 100%;
 }
 header nav .default-content-wrapper {
   color: var(--rh-header-text-color);
