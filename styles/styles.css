@@ -329,3 +329,16 @@ main .section.highlight {
 .events-tabs .default-content-wrapper p:first-child {
   border-bottom: 3px solid #f6efdf !important;
 }
+.events-gallery h2 {
+  padding-top: 20px;
+  border-top: 1px solid;
+  padding-bottom: 0;
+  font-size: 2.5em;
+  line-height: .9;
+  font-weight: 400;
+  font-family: "soehne Schmal Dreiviertelfett", sans-serif;
+  letter-spacing: 0;
+  margin-bottom: 40px;
+  padding-right: 7.5px;
+  padding-left: 7.5px;
+}

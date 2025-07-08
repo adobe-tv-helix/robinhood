@@ -128,3 +128,8 @@ footer .columns-2-cols div:first-child>div:last-child {
   margin-left: 50px;
   margin-right: 10px;
 }
+
+footer .columns-4-cols div.columns-para-col>p:not(:first-child) {
+  display: inline-block;
+}
+
