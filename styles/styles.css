@@ -310,3 +310,22 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+/* CUSTOM FOR ROBINHOOD */
+.events-tabs .default-content-wrapper {
+  display: flex;
+  border-bottom: 1px solid #f6efdf;
+}
+.events-tabs .default-content-wrapper p {
+  margin-right: 30px;
+  width: auto !important;
+  font-size: 1.4375em;
+  line-height: 1.26087;
+  font-weight: 400;
+  font-family: "soehne Buch", sans-serif;
+  letter-spacing: 0;
+  padding-bottom: 20px;
+}
+.events-tabs .default-content-wrapper p:first-child {
+  border-bottom: 3px solid #f6efdf !important;
+}
