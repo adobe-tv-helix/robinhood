@@ -222,5 +222,31 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "form",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text-one",
+        "label": "Input One",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text-two",
+        "label": "Input Two",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text-three",
+        "label": "Input Three",
+        "value": ""
+      }
+    ]
   }
 ]
