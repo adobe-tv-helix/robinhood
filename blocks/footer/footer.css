@@ -100,3 +100,31 @@ footer .columns-wrapper .columns-2-cols div:first-child {
 footer .columns-wrapper div {
   align-self: flex-start;
 }
+/* THIS SHOULD GO IN SOCIAL-MEDIA.CSS BUT DOES NOT SEEM TO BE WORKING THERE???? */
+footer span.icon {
+    height: 60px !important;
+    width: 60px !important;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #f6efdf;
+    text-transform: uppercase;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 0;
+    transform: translateZ(0);
+
+    z-index: 2;
+    border-radius: 50%;
+}
+footer span.icon:not(:last-child) {
+    margin-right: 20px;
+}
+footer .columns-2-cols div:first-child>div:last-child {
+  text-align: right;
+  margin-left: 50px;
+  margin-right: 10px;
+}

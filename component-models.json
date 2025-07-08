@@ -258,34 +258,6 @@
     "fields": [
       {
         "component": "select",
-        "name": "instagram_icon",
-        "value": "",
-        "label": "Instagram Icon",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Facebook",
-            "value": ":facebook:"
-          },
-          {
-            "name": "Instagram",
-            "value": ":instagram:"
-          },
-          {
-            "name": "Twitter/X",
-            "value": ":twitter:"
-          }
-        ]
-      },
-      {
-        "component": "aem-content",
-        "name": "instagram_iconLink",
-        "value": "",
-        "label": "Instagram Link",
-        "valueType": "string"
-      },
-      {
-        "component": "select",
         "name": "facebook_icon",
         "value": "",
         "label": "Facebook Icon",
@@ -302,6 +274,10 @@
           {
             "name": "Twitter/X",
             "value": ":twitter:"
+          },
+          {
+            "name": "LinkedIn",
+            "value": ":linkedin:"
           }
         ]
       },
@@ -330,6 +306,10 @@
           {
             "name": "Twitter/X",
             "value": ":twitter:"
+          },
+          {
+            "name": "LinkedIn",
+            "value": ":linkedin:"
           }
         ]
       },
@@ -338,6 +318,70 @@
         "name": "twitter_iconLink",
         "value": "",
         "label": "Twitter Link",
+        "valueType": "string"
+      },
+            {
+        "component": "select",
+        "name": "instagram_icon",
+        "value": "",
+        "label": "Instagram Icon",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Facebook",
+            "value": ":facebook:"
+          },
+          {
+            "name": "Instagram",
+            "value": ":instagram:"
+          },
+          {
+            "name": "Twitter/X",
+            "value": ":twitter:"
+          },
+          {
+            "name": "LinkedIn",
+            "value": ":linkedin:"
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "instagram_iconLink",
+        "value": "",
+        "label": "Instagram Link",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "linkedin_icon",
+        "value": "",
+        "label": "LinkedIn Icon",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Facebook",
+            "value": ":facebook:"
+          },
+          {
+            "name": "Instagram",
+            "value": ":instagram:"
+          },
+          {
+            "name": "Twitter/X",
+            "value": ":twitter:"
+          },
+          {
+            "name": "LinkedIn",
+            "value": ":linkedin:"
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "linkedin_iconLink",
+        "value": "",
+        "label": "LinkedIn Link",
         "valueType": "string"
       }
     ]

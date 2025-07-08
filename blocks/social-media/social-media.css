@@ -31,7 +31,7 @@ footer .wrapper .section.social-media-container img {
   }
 }
 /* CUSTOM FOR ROBINHOOD */
-footer span.icon {
+span.icon {
     height: 60px !important;
     width: 60px !important;
     position: relative;
