@@ -136,6 +136,10 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Footer Left",
+            "value": "left col-lg-5 col-md-5 col-sm-6"
           }
         ]
       }
