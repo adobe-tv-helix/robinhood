@@ -140,6 +140,14 @@
           {
             "name": "Footer Left",
             "value": "left col-lg-5 col-md-5 col-sm-6"
+          },
+          {
+            "name": "Footer Logo Left",
+            "value": "col-lg-1 col-md-1 col-sm-auto col-auto col-logo "
+          },
+          {
+            "name": "Footer Menu Left",
+            "value": "col-lg-4 col-md-4 col-sm-auto col-auto col-footer-menu"
           }
         ]
       }
