@@ -134,8 +134,8 @@
         "label": "Style",
         "options": [
           {
-            "name": "Highlight",
-            "value": "highlight"
+            "name": "Events Tabs",
+            "value": "events-tabs"
           },
           {
             "name": "Events Main",
@@ -144,6 +144,10 @@
           {
             "name": "Footer Bottom",
             "value": "col-12 bottom-content"
+          },
+          {
+            "name": "Highlight",
+            "value": "highlight"
           }
         ]
       }
