@@ -101,6 +101,8 @@
   display: flex;
   flex-wrap: wrap;
   padding: 0 40px 30px 40px;
-  font-size: 140px;
-  letter-spacing: -5px;
+  font-size: 6.25em;
+  line-height: 0.76;
+  font-weight: 400;
+  font-family: "soehne Schmal Dreiviertelfett", sans-serif;
 }
