@@ -3,9 +3,12 @@ export default async function decorate(block) {
     const iconName = child.querySelector('img').getAttribute('data-icon-name');
     child.querySelector('a').title = iconName;
     child.querySelector('img').alt = iconName;
+    
     // add for xwalk
     const spanTag = child.querySelector('span');
     const anchorTag = child.querySelector('a');
+    const parentDivTag = child.querySelector('div');
+    parentDivTag.classList.add('crazy-hippo0');
     if (anchorTag.querySelector('span')) {
       // do not do anything since span already inside anchor in doc-based
     } else {
