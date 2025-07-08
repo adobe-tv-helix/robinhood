@@ -59,10 +59,14 @@ footer ul li {
   font-size: 24px;
 }
 footer .columns-img-col {
-  margin-left: -100px;
-  margin-right: -180px;
+  /*margin-left: -100px;*/
+  margin-right: -280px;
   align-self: flex-start !important;
   margin-top: 1em;
+}
+footer .columns-img-col img {
+  width: 77.75px;
+  height: 80px;
 }
 footer ul li a {
   color: var(--rh-text-color) !important;
