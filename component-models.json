@@ -138,8 +138,12 @@
             "value": "highlight"
           },
           {
+            "name": "Events Main",
+            "value": "events-main"
+          },
+          {
             "name": "Footer Bottom",
-            "value": "col-12 col-footer-bottom bottom-content"
+            "value": "col-12 bottom-content"
           }
         ]
       }

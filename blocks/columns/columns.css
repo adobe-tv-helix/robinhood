@@ -31,3 +31,23 @@
     order: unset;
   }
 }
+
+/* CUSTOM FOR ROBINHOOD */
+.columns h3 {
+  font-size: .875em;
+  line-height: 1.28571;
+  font-weight: 400;
+  font-family: "soehne Buch", sans-serif;
+  letter-spacing: 0;
+  margin-bottom: 10px;
+}
+.columns h5 {
+  font-size: 1.4375em;
+  line-height: 1.26087;
+  font-weight: 400;
+  font-family: "soehne Buch", sans-serif;
+  letter-spacing: 0;
+}
+.columns-wrapper {
+  margin-top: 40px !important;
+}
