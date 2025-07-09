@@ -3,12 +3,6 @@
  * @param {Element} block The footer block element
  */
 export default async function decorate(block) {
-  // decorate footer DOM
-  //block.textContent = '';
-  const footer = document.createElement('div');
-  footer.classList.add('some-custom-here');
-
-  block.append(footer);
-  console.log('in basic form here');
-  block.classList.add('some-basic-form-custom-class');
+  console.log('in basic form here outside of columns here');
+  block.classList.add('basic-form-custom');
 }
