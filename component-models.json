@@ -177,10 +177,11 @@
     ]
   },
   {
-    "id": "carousel-item",
+    "id": "carousel-single",
     "fields": [
       {
         "component": "reference",
+        "valueType": "string",
         "name": "carousel_image",
         "label": "Carousel Image",
         "multi": false
