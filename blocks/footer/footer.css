@@ -132,4 +132,138 @@ footer .columns-2-cols div:first-child>div:last-child {
 footer .columns-4-cols div.columns-para-col>p:not(:first-child) {
   display: inline-block;
 }
-
+/* FOR FORM IN FOOTER */
+@media (min-width: 576px) {
+    footer#main-footer .col-form .form-content {
+        padding-right: 67.5px;
+    }
+}
+@media (max-width: 1279.98px) and (min-width: 769px) {
+    .container .row, .modal .container .row {
+        margin-right: -7.5px;
+        margin-left: -7.5px;
+    }
+}
+footer .container, footer .row, header .container, header .row {
+    height: 100%;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+}
+@media (min-width: 769px) {
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 41%; /*50%;*/
+    }
+}
+footer .columns-basic-form .col-md-6, footer .columns-basic-form .col-md-12 {
+  padding-right: 7.5px;
+  padding-left: 7.5px;
+}
+footer .columns-basic-form pre {
+  border-color: #f6efdf;
+  box-shadow: 0 0 0 0 rgba(var(--bs-danger-rgb), .25);
+  padding-right: 0;
+  background-image: none;
+  font-size: 1.4375em;
+  line-height: 1.26087;
+  font-weight: 400;
+  font-family: "soehne Buch", sans-serif !important;
+  letter-spacing: 0;
+  color: #f6efdf !important;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  border-bottom: 1px solid #f6efdf;
+  padding: 0 0 10px;
+  margin-right: 10px;
+  /*width: 100%;*/
+}
+@media (min-width: 769px) {
+    footer#main-footer .input-col:not(:first-child):not(:nth-child(2)) {
+        margin-top: 30px;
+    }
+}
+@media (min-width: 769px) {
+    .col-md-12 {
+        flex: 0 0 auto;
+        width: 90%; /*100%;*/
+    }
+}
+/* FOR SUBMIT BUTTON IN SIMULATED FORM IN FOOTER */
+footer .form-submit .arrows {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+}
+footer .form-submit .arrows.small-arrow.blue, .arrows.small-arrow.blue-2 {
+    color: #fff;
+    background-color: #002f6c;
+    border-color: #f6efdf;
+}
+@media (min-width: 769px) {
+    .arrows.small-arrow {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+    }
+}
+footer .form-submit .arrows.small-arrow {
+  text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid;
+    transition: .35s ease-in-out;
+    transform: translateZ(0);
+}
+footer .form-submit button {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+footer .form-submit .arrows.small-arrow .icon {
+    position: relative;
+    z-index: 2;
+    transition: .2s;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+@media (min-width: 769px) {
+    .arrows.small-arrow.blue-2.left .icon:before, .arrows.small-arrow.blue.left .icon:before, .ui-on-dark section:not(.block-cta-with-description):not(.block-image-text-carousel) .arrows.left.small-arrow .icon:before {
+        background-image: url('/icons/small-arrow-left-green.svg');
+    }
+}
+footer .arrows.small-arrow .icon:before {
+    z-index: 1;
+}
+@media (min-width: 769px) {
+    .arrows.small-arrow .icon:after, .arrows.small-arrow .icon:before {
+        background-size: auto 30px;
+    }
+}
+footer .arrows.small-arrow .icon:after, .arrows.small-arrow .icon:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 30px;
+    transition: .2s;
+}

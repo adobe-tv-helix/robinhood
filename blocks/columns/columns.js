@@ -20,7 +20,68 @@ export default function decorate(block) {
           parentDivTag.classList.add('columns-para-col');
         }
       }
+//       const paraParentDivTag = col.querySelector('p');
+//       console.log('para parent = ' + paraParentDivTag);
+//       if (paraParentDivTag) {
+//         const paraDivTag = paraParentDivTag.closest('div');
+//         const newParentTag = document.createElement('div');
+//         const preTags = col.querySelectorAll('pre');
+//         if(newParentTag) {
+//           newParentTag.classList.add('i-dont-know');
+//           preTags.forEach(function( p, index) {
+//             newParentTag.append(p);
+//           });
+//         }
+// paraDivTag.append(newParentTag);  
+//       }
     });
+          const tt = row.querySelector('.columns-para-col');
+      console.log('using row, returning columns-para-col div2 = ' + tt);
+      // only move the <pre>fields</pre>, symbolizing the "form", in a column (footer) into each own div (to then style)
+      // not the way to do this in production!
+      const paraColDiv = row.querySelector('.columns-para-col');
+      if (paraColDiv) {
+        const preTags = paraColDiv.querySelectorAll('pre');
+        if (preTags && preTags.length > 1) {
+          const newParentDivTag = document.createElement('div');
+          if (newParentDivTag) {
+            newParentDivTag.classList.add('columns-basic-form');
+            newParentDivTag.classList.add('form-content');
+            newParentDivTag.classList.add('row');
+            preTags.forEach(function(singlePreTag, index) {
+              if (index !== preTags.length - 1) {
+                singlePreTag.classList.add('col-md-6');
+              } else {
+                singlePreTag.classList.add('col-md-12');
+              }
+              singlePreTag.classList.add('input-col');
+              newParentDivTag.append(singlePreTag);
+            });
+          }
+          paraColDiv.append(newParentDivTag);
+          // now add another div to "simulate" the submit button
+          // urgh
+          const newSubmitDivTag = document.createElement('div');
+          if (newSubmitDivTag) {
+            newSubmitDivTag.classList.add('form-submit');
+            const newButtonTag = document.createElement('button');
+            if (newButtonTag) {
+              newButtonTag.classList.add('arrows');
+              newButtonTag.classList.add('small-arrow');
+              newButtonTag.classList.add('blue');
+              newButtonTag.classList.add('left');
+              newButtonTag.classList.add('with-hover');
+              const newSpanTag = document.createElement('span');
+              if (newSpanTag) {
+                newSpanTag.classList.add('icon');
+              }
+              newButtonTag.append(newSpanTag);
+            }
+            newSubmitDivTag.append(newButtonTag);
+          }
+          paraColDiv.append(newSubmitDivTag);
+        }
+      }
   });
 
   // more testing

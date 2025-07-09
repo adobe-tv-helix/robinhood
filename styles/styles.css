@@ -183,7 +183,7 @@ blockquote {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
 }
-
+/*
 code,
 pre {
   font-size: var(--body-font-size-s);
@@ -196,7 +196,7 @@ pre {
   overflow-x: auto;
   white-space: pre;
 }
-
+*/
 main > div {
   margin: 40px 16px;
 }
@@ -283,9 +283,11 @@ main img {
 }
 
 /* sections */
+/*
 main > .section {
-  /*margin: 40px 0;*/
+  margin: 40px 0;
 }
+  */
 
 main > .section > div {
   max-width: 1200px;
