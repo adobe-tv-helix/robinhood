@@ -25,8 +25,12 @@ export default function decorate(block) {
 
   // more testing
         //
-      const secondP = document.querySelectorAll('.columns-4-cols .columns-para-col > p')[1];
+  const colContainer = document.querySelector('.columns-4-cols');
+  if (colContainer) {
+      const secondP = colContainer.querySelectorAll('.columns-para-col > p')[1];
       if (secondP) {
         console.log('the sceond para = ' + secondP.textContent);
       }
+  }
+
 }
