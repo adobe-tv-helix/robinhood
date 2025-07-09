@@ -9,5 +9,6 @@ export default async function decorate(block) {
   footer.classList.add('some-custom-here');
 
   block.append(footer);
-  console.log('here');
+  console.log('in basic form here');
+  block.classList.add('some-basic-form-custom-class');
 }
