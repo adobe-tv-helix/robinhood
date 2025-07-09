@@ -20,6 +20,11 @@ export default function decorate(block) {
           parentDivTag.classList.add('columns-para-col');
         }
       }
+      //
+      const secondP = col.querySelectorAll('.columns-para-col > p')[1];
+      if (secondP) {
+        console.log('the sceond para = ' + secondP.textContent);
+      }
     });
   });
 }
