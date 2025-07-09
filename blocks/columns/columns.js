@@ -58,7 +58,7 @@ export default function decorate(block) {
               newParentDivTag.append(singlePreTag);
             });
           }
-          paraColDiv.append(newParentDivTag);
+
           // now add another div to "simulate" the submit button
           // urgh
           const newSubmitDivTag = document.createElement('div');
@@ -73,13 +73,14 @@ export default function decorate(block) {
               newButtonTag.classList.add('with-hover');
               const newSpanTag = document.createElement('span');
               if (newSpanTag) {
-                newSpanTag.classList.add('icon');
+                newSpanTag.classList.add('icon-form');
               }
               newButtonTag.append(newSpanTag);
             }
             newSubmitDivTag.append(newButtonTag);
           }
-          paraColDiv.append(newSubmitDivTag);
+          newParentDivTag.append(newSubmitDivTag);
+          paraColDiv.append(newParentDivTag);
         }
       }
   });
