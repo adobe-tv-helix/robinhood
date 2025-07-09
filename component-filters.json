@@ -17,7 +17,8 @@
       "columns",
       "fragment",
       "basic-form",
-      "carousel"
+      "carousel",
+      "slides"
     ]
   },
   {
@@ -47,6 +48,12 @@
     "id": "carousel",
     "components": [
       "carousel-item"
+    ]
+  },
+  {
+    "id": "slides",
+    "components": [
+      "slide"
     ]
   }
 ]

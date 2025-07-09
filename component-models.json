@@ -176,14 +176,14 @@
       }
     ]
   },
-    {
+  {
     "id": "carousel-item",
     "fields": [
       {
         "component": "reference",
         "name": "carousel_image",
         "label": "Carousel Image",
-        "multi": true
+        "multi": false
       },
       {
         "component": "text",
@@ -191,6 +191,25 @@
         "name": "carousel_imageAlt",
         "label": "Carousel Image Alt",
         "value": ""
+      }
+    ]
+  },
+  {
+    "id": "slide",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "value": "",
+        "label": "Image Alt",
+        "valueType": "string"
       }
     ]
   },
