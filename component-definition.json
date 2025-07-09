@@ -215,7 +215,8 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Carousel Item",
-                  "model": "carousel-item"
+                  "model": "carousel-item",
+                  "image": "/content/dam/robinhood/peak-performance.png"
                 }
               }
             }
