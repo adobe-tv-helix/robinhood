@@ -181,15 +181,14 @@
     "fields": [
       {
         "component": "reference",
-        "valueType": "string",
-        "name": "carouselSlide",
+        "name": "carousel_image",
         "label": "Carousel Image",
-        "multi": false
+        "multi": true
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "carouselSlideAlt",
+        "name": "carousel_imageAlt",
         "label": "Carousel Image Alt",
         "value": ""
       }
