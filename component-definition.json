@@ -137,7 +137,8 @@
                 "template": {
                   "name": "Carousel Item",
                   "model": "carousel-item",
-                  "image": "/content/dam/robinhood/peak-performance.png"
+                  "image": "/content/dam/robinhood/peak-performance.png",
+                  "imageAlt": "placeholder alt text"
                 }
               }
             }
