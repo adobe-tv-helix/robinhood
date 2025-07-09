@@ -101,14 +101,14 @@ console.log('before placeholders in carousel decorate ....');
 
   block.setAttribute('role', 'region');
   block.setAttribute('aria-roledescription', placeholders.carousel || 'Carousel');
-
+console.log('after first placeholder in carousel decorate...');
   const container = document.createElement('div');
   container.classList.add('carousel-slides-container');
 
   const slidesWrapper = document.createElement('ul');
   slidesWrapper.classList.add('carousel-slides');
   block.prepend(slidesWrapper);
-
+console.log('before second placeholder in carousel decorate ...');
   let slideIndicators;
   if (!isSingleSlide) {
     const slideIndicatorsNav = document.createElement('nav');
@@ -117,7 +117,7 @@ console.log('before placeholders in carousel decorate ....');
     slideIndicators.classList.add('carousel-slide-indicators');
     slideIndicatorsNav.append(slideIndicators);
     block.append(slideIndicatorsNav);
-
+console.log('before third placeholder in carousel decorate ...');
     const slideNavButtons = document.createElement('div');
     slideNavButtons.classList.add('carousel-navigation-buttons');
     slideNavButtons.innerHTML = `
@@ -148,4 +148,5 @@ console.log('before placeholders in carousel decorate ....');
   if (!isSingleSlide) {
     bindEvents(block);
   }
+console.log('end carousel decorate ...');
 }
