@@ -18,7 +18,7 @@
       "fragment",
       "basic-form",
       "carousel",
-      "slides"
+      "photos"
     ]
   },
   {
@@ -51,9 +51,9 @@
     ]
   },
   {
-    "id": "slides",
+    "id": "photos",
     "components": [
-      "slide"
+      "photo"
     ]
   }
 ]
