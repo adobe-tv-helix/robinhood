@@ -176,6 +176,25 @@
       }
     ]
   },
+    {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "carouselSlide",
+        "label": "Carousel Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "carouselSlideAlt",
+        "label": "Carousel Image Alt",
+        "value": ""
+      }
+    ]
+  },
   {
     "id": "columns",
     "fields": [
@@ -386,32 +405,6 @@
         "name": "linkedin_iconLink",
         "value": "",
         "label": "LinkedIn Link",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "carousel-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "carouselSlide",
-        "label": "Carousel Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "carouselSlideAlt",
-        "label": "Carousel Image Alt",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
         "valueType": "string"
       }
     ]
