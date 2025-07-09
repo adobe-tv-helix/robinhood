@@ -130,14 +130,14 @@
           }
         },
         {
-          "title": "Carousel Item",
+          "title": "Carousel Slide",
           "id": "carousel-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "Carousel Item",
+                  "name": "Carousel Slide",
                   "model": "carousel-item",
                   "image": "/content/dam/robinhood/peak-performance.png",
                   "imageAlt": "placeholder alt text"
