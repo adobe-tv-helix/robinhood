@@ -91,11 +91,12 @@ function createSlide(row, slideIndex, carouselId) {
 
 let carouselId = 0;
 export default async function decorate(block) {
+    console.log('in beginning of carousel decorate ....');
   carouselId += 1;
   block.setAttribute('id', `carousel-${carouselId}`);
   const rows = block.querySelectorAll(':scope > div');
   const isSingleSlide = rows.length < 2;
-
+console.log('before placeholders in carousel decorate ....');
   const placeholders = await fetchPlaceholders();
 
   block.setAttribute('role', 'region');

@@ -35,8 +35,6 @@ export default function decorate(block) {
 // paraDivTag.append(newParentTag);  
 //       }
     });
-          const tt = row.querySelector('.columns-para-col');
-      console.log('using row, returning columns-para-col div2 = ' + tt);
       // only move the <pre>fields</pre>, symbolizing the "form", in a column (footer) into each own div (to then style)
       // not the way to do this in production!
       const paraColDiv = row.querySelector('.columns-para-col');
@@ -84,16 +82,4 @@ export default function decorate(block) {
         }
       }
   });
-
-  // more testing
-        //
-  const colContainer = block.querySelector('.columns-4-cols');
-  console.log('found col container = ' + colContainer);
-  if (colContainer) {
-      const secondP = colContainer.querySelectorAll('.columns-para-col > p')[1];
-      if (secondP) {
-        console.log('the sceond para = ' + secondP.textContent);
-      }
-  }
-
 }
