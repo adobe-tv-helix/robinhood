@@ -16,7 +16,8 @@
       "cards",
       "columns",
       "fragment",
-      "basic-form"
+      "basic-form",
+      "carousel"
     ]
   },
   {
@@ -40,6 +41,12 @@
       "title",
       "basic-form",
       "social-media"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "carousel-item"
     ]
   }
 ]
