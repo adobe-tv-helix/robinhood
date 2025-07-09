@@ -46,7 +46,6 @@
   {
     "id": "carousel",
     "components": [
-      "carousel-item",
       "image"
     ]
   }
