@@ -26,6 +26,7 @@ export default function decorate(block) {
   // more testing
         //
   const colContainer = document.querySelector('.columns-4-cols');
+  console.log('found col container = ' + colContainer);
   if (colContainer) {
       const secondP = colContainer.querySelectorAll('.columns-para-col > p')[1];
       if (secondP) {
