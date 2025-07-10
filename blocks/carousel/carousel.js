@@ -69,15 +69,15 @@ function bindEvents(block) {
 //     });
 //   }, { threshold: 0.5 });
     const slideObserver = new IntersectionObserver((entries) => {
-        // Filter for entries that are intersecting (i.e., visible)
+        // Only look for slides that are at least 50% visible
         const visibleSlides = entries.filter(entry => entry.isIntersecting);
 
-        // Sort by their position in the DOM if needed
-        visibleSlides.sort((a, b) => a.target.dataset.slideIndex - b.target.dataset.slideIndex);
-
-        if (visibleSlides.length > 0) {
-            // Activate only the first visible slide (or another logic, e.g., nearest to the left)
-            updateActiveSlide(visibleSlides[0].target);
+        if (visibleSlides.length) {
+            // Always activate the "leftmost" (smallest index) visible slide
+            const nextActive = visibleSlides
+            .map(entry => entry.target)
+            .sort((a, b) => parseInt(a.dataset.slideIndex) - parseInt(b.dataset.slideIndex))[0];
+            updateActiveSlide(nextActive);
         }
     }, { threshold: 0.5 });
   block.querySelectorAll('.carousel-slide').forEach((slide) => {
