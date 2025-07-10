@@ -2,7 +2,9 @@
   "mappings": [
     "/content/robinhood/:/",
     "/content/robinhood/configuration:/.helix/config.json",
-    "/content/robinhood/metadata:/metadata.json"
+    "/content/robinhood/metadata:/metadata.json",
+    "/content/robinhood/redirects:/redirects.json",
+    "/content/robinhood/placeholders:/placeholders.json"
   ],
   "includes": [
     "/content/robinhood/"
