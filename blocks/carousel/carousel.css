@@ -123,7 +123,8 @@
 .carousel .carousel-navigation-buttons button:focus-visible,
 .carousel .carousel-navigation-buttons-rh button:hover,
 .carousel .carousel-navigation-buttons-rh button:focus-visible {
-  background-color: rgb(19 19 19 / 75%);
+  /*background-color: rgb(19 19 19 / 75%);*/
+  background-color: rgb(189 231 36 / 75%);
   /*background-color: transparent;*/ /* CUSTOM ADD FOR ROBINHOOD */
 }
 
