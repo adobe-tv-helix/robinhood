@@ -90,12 +90,12 @@
   background-color: var(--text-color);
 }
 
-.carousel .carousel-navigation-buttons-rh {
-    justify-content: right;
+.carousel .carousel-navigation-buttons, .carousel .carousel-navigation-buttons-rh {
+    margin-top: 30px;
 }
 .carousel .carousel-navigation-buttons, .carousel .carousel-navigation-buttons-rh {
-  /*position: absolute;*/
-  top: 50%;
+  position: absolute;
+  /*top: 50%;*/
   transform: translateY(-50%);
   left: 12px;
   right: 12px;
@@ -107,15 +107,15 @@
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-.carousel .carousel-navigation-buttons button, .carouse .carousel-navigation-buttons-rh button {
+.carousel .carousel-navigation-buttons button, .carousel .carousel-navigation-buttons-rh button {
   position: relative;
   width: 44px;
   height: 44px;
   margin: 0;
   border-radius: 50%;
-  padding: 0;
-  background-color: rgb(19 19 19 / 25%);
-  /*background-color: transparent;*/ /* CUSTOM ADD FOR ROBINHOOD */
+  /*padding: 0;*/ /* REMOVED FOR ROBINHOOD */
+  /*background-color: rgb(19 19 19 / 25%);*/
+  background-color: transparent; /* CUSTOM ADD FOR ROBINHOOD */
   transition: background-color 0.2s;
 }
 
@@ -136,7 +136,7 @@
   border-left: 0;
   height: 12px;
   width: 12px;
-  position: absolute;
+  position: absolute; /* REMOVED FOR ROBINHOOD */
   top: 50%;
   left: calc(50% + 2px);
   transform: translate(-50%, -50%) rotate(-135deg);

@@ -43,7 +43,7 @@ function showSlide(block, slideIndex = 0) {
 }
 
 function bindEvents(block) {
-  const slideIndicators = block.querySelector('.carousel-slide-indicators');
+  const slideIndicators = block.querySelector('.carousel-navigation-buttons'); //block.querySelector('.carousel-slide-indicators');
   if (!slideIndicators) return;
 
   slideIndicators.querySelectorAll('button').forEach((button) => {
@@ -118,7 +118,7 @@ export default async function decorate(block) {
     // block.append(slideIndicatorsNav);
 
     const slideNavButtons = document.createElement('div');
-    slideNavButtons.classList.add('carousel-navigation-buttons-rh');
+    slideNavButtons.classList.add('carousel-navigation-buttons');
     slideNavButtons.innerHTML = `
       <button type="button" class= "slide-prev" aria-label="${placeholders.previousSlide || 'Previous Slide'}"></button>
       <button type="button" class="slide-next" aria-label="${placeholders.nextSlide || 'Next Slide'}"></button>
