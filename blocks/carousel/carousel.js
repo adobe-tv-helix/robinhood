@@ -125,7 +125,7 @@ export default async function decorate(block) {
     `;
 
     slideIndicatorsNav.append(slideNavButtons);
-    // container.append(slideNavButtons);
+    container.append(slideNavButtons);
   }
 
   rows.forEach((row, idx) => {
