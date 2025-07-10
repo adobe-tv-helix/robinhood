@@ -60,11 +60,11 @@ function bindEvents(block) {
     showSlide(block, parseInt(block.dataset.activeSlide, 10) + 1);
   });
 
-//   const slideObserver = new IntersectionObserver((entries) => {
-//     entries.forEach((entry) => {
-//       if (entry.isIntersecting) updateActiveSlide(entry.target);
-//     });
-//   }, { threshold: 0.5 });
+  const slideObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) updateActiveSlide(entry.target);
+    });
+  }, { threshold: 0.5 });
   block.querySelectorAll('.carousel-slide').forEach((slide) => {
     slideObserver.observe(slide);
   });
@@ -127,7 +127,7 @@ export default async function decorate(block) {
     container.append(slideNavButtons);
   }
 
-//   rows.forEach((row, idx) => {
+  rows.forEach((row, idx) => {
 //     const slide = createSlide(row, idx, carouselId);
 //     slidesWrapper.append(slide);
 
@@ -139,7 +139,7 @@ export default async function decorate(block) {
 //       slideIndicators.append(indicator);
 //     }
 //     row.remove();
-//   });
+  });
 
   container.append(slidesWrapper);
   block.prepend(container);
