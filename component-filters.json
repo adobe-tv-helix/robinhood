@@ -17,8 +17,7 @@
       "columns",
       "fragment",
       "basic-form",
-      "carousel",
-      "photos"
+      "carousel"
     ]
   },
   {
@@ -48,12 +47,6 @@
     "id": "carousel",
     "components": [
       "carousel-single"
-    ]
-  },
-  {
-    "id": "photos",
-    "components": [
-      "photo"
     ]
   }
 ]
