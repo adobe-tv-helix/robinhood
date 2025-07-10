@@ -124,7 +124,7 @@ export default async function decorate(block) {
       <button type="button" class="slide-next" aria-label="${placeholders.nextSlide || 'Next Slide'}"></button>
     `;
 
-    slideIndicatorsNav.append(slideIndicators);
+    // slideIndicatorsNav.append(slideIndicators);
     slideIndicatorsNav.append(slideNavButtons);
     block.append(slideIndicatorsNav);
 
