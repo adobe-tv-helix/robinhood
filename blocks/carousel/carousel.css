@@ -91,7 +91,7 @@
 }
 
 .carousel .carousel-navigation-buttons, .carousel .carousel-navigation-buttons-rh {
-  position: absolute;
+  /*position: absolute;*/
   top: 50%;
   transform: translateY(-50%);
   left: 12px;

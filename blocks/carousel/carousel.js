@@ -110,7 +110,7 @@ export default async function decorate(block) {
 
   let slideIndicators;
   if (!isSingleSlide) {
-    const slideIndicatorsNav = document.createElement('div'); //document.createElement('nav');
+    const slideIndicatorsNav = document.createElement('nav');
     slideIndicatorsNav.setAttribute('aria-label', placeholders.carouselSlideControls || 'Carousel Slide Controls');
     slideIndicators = document.createElement('ol');
     slideIndicators.classList.add('carousel-slide-indicators');
@@ -124,7 +124,7 @@ export default async function decorate(block) {
       <button type="button" class="slide-next" aria-label="${placeholders.nextSlide || 'Next Slide'}"></button>
     `;
 
-    // slideIndicatorsNav.append(slideIndicators);
+    slideIndicatorsNav.append(slideIndicators);
     slideIndicatorsNav.append(slideNavButtons);
     block.append(slideIndicatorsNav);
 
