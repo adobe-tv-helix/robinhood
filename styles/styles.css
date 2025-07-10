@@ -314,6 +314,11 @@ main .section.highlight {
 }
 
 /* CUSTOM FOR ROBINHOOD */
+main > .events-tabs > div, main > .events-gallery > div {
+  max-width: 95% !important;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+}
 .events-tabs .default-content-wrapper {
   display: flex;
   border-bottom: 1px solid #f6efdf;
