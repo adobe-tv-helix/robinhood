@@ -142,6 +142,9 @@ export default async function decorate(block) {
       slideIndicators.append(indicator);
     }
     console.log('row = ' + row + ' inner html = ' + row.innerHTML);
+    row.childNodes.forEach(node => {
+        console.log('node = ' + node);
+    });
     // row.remove();
   });
 
