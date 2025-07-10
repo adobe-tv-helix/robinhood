@@ -128,8 +128,8 @@ export default async function decorate(block) {
   }
 
   rows.forEach((row, idx) => {
-//     const slide = createSlide(row, idx, carouselId);
-//     slidesWrapper.append(slide);
+    const slide = createSlide(row, idx, carouselId);
+    slidesWrapper.append(slide);
 
 //     if (slideIndicators) {
 //       const indicator = document.createElement('li');
