@@ -43,15 +43,17 @@ function showSlide(block, slideIndex = 0) {
 }
 
 function bindEvents(block) {
-  const slideIndicators = block.querySelector('.carousel-navigation-buttons'); //block.querySelector('.carousel-slide-indicators');
-  if (!slideIndicators) return;
+  const slideIndicators = block.querySelector('.carousel-slide-indicators');
+//   if (!slideIndicators) return;
 
-  slideIndicators.querySelectorAll('button').forEach((button) => {
-    button.addEventListener('click', (e) => {
-      const slideIndicator = e.currentTarget.parentElement;
-      showSlide(block, parseInt(slideIndicator.dataset.targetSlide, 10));
+  if (slideIndicators) {
+    slideIndicators.querySelectorAll('button').forEach((button) => {
+        button.addEventListener('click', (e) => {
+        const slideIndicator = e.currentTarget.parentElement;
+        showSlide(block, parseInt(slideIndicator.dataset.targetSlide, 10));
+        });
     });
-  });
+  }
 
   block.querySelector('.slide-prev').addEventListener('click', () => {
     showSlide(block, parseInt(block.dataset.activeSlide, 10) - 1);
@@ -141,7 +143,7 @@ export default async function decorate(block) {
       indicator.innerHTML = `<button type="button" aria-label="${placeholders.showSlide || 'Show Slide'} ${idx + 1} ${placeholders.of || 'of'} ${rows.length}"></button>`;
       slideIndicators.append(indicator);
     }
-    console.log('row = ' + row + ' inner html = ' + row.innerHTML);
+    console.log('row = ' + row + ' inner html = ' + row.innerHTML + ', index = ' + idx);
     row.childNodes.forEach(node => {
         console.log('node = ' + node.textContent);
     });
