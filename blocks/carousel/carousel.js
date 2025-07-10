@@ -1,6 +1,6 @@
 import { fetchPlaceholders } from '../../scripts/placeholders.js';
 
-let suppressObserver = false;
+let suppressObserver = false; // custom added for robinhood
 function updateActiveSlide(slide) {
   const block = slide.closest('.carousel');
   const slideIndex = parseInt(slide.dataset.slideIndex, 10);
@@ -57,7 +57,7 @@ function showSlide(block, slideIndex = 0) {
 
 function bindEvents(block) {
   const slideIndicators = block.querySelector('.carousel-slide-indicators');
-//   if (!slideIndicators) return;
+//   if (!slideIndicators) return;  // commented out because slide indicators (under carousel) not displayed for robinhood
 
   if (slideIndicators) {
     slideIndicators.querySelectorAll('button').forEach((button) => {
@@ -75,6 +75,7 @@ function bindEvents(block) {
     showSlide(block, parseInt(block.dataset.activeSlide, 10) + 1);
   });
 
+  // commented out original
 //   const slideObserver = new IntersectionObserver((entries) => {
 //     entries.forEach((entry) => {
 //       if (entry.isIntersecting) updateActiveSlide(entry.target);
@@ -99,7 +100,7 @@ function bindEvents(block) {
         //     updateActiveSlide(nextActive);
         // }
     }, { threshold: 0.5 });
-    
+    // end custom added for robinhood
   block.querySelectorAll('.carousel-slide').forEach((slide) => {
     slideObserver.observe(slide);
   });
@@ -149,6 +150,7 @@ export default async function decorate(block) {
     slideIndicatorsNav.setAttribute('aria-label', placeholders.carouselSlideControls || 'Carousel Slide Controls');
     slideIndicators = document.createElement('ol');
     slideIndicators.classList.add('carousel-slide-indicators');
+    // commented out original because slide indicators (dots under carousel) are not displayed for robinhood
     // slideIndicatorsNav.append(slideIndicators);
     // block.append(slideIndicatorsNav);
 
@@ -162,6 +164,8 @@ export default async function decorate(block) {
     slideIndicatorsNav.append(slideNavButtons);
     block.append(slideIndicatorsNav);
 
+    // commented out original because prev/next buttons displayed where dots were and not
+    // in middle of image for robinhood
     // container.append(slideNavButtons);
   }
 
@@ -176,9 +180,9 @@ export default async function decorate(block) {
       indicator.innerHTML = `<button type="button" aria-label="${placeholders.showSlide || 'Show Slide'} ${idx + 1} ${placeholders.of || 'of'} ${rows.length}"></button>`;
       slideIndicators.append(indicator);
     }
-    console.log('row = ' + row + ' inner html = ' + row.innerHTML + ', index = ' + idx);
+// TODO debugging
     row.childNodes.forEach(node => {
-        console.log('node = ' + node.textContent);
+        console.log('row = ' + row + ', inner html = ' + row.innerHTML + ', index = ' + idx + ', node = ' + node.textContent);
     });
     // row.remove();
   });
