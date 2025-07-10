@@ -1,32 +1,32 @@
 import { fetchPlaceholders } from '../../scripts/placeholders.js';
 
-function updateActiveSlide(slide) {
-  const block = slide.closest('.carousel');
-  const slideIndex = parseInt(slide.dataset.slideIndex, 10);
-  block.dataset.activeSlide = slideIndex;
+// function updateActiveSlide(slide) {
+//   const block = slide.closest('.carousel');
+//   const slideIndex = parseInt(slide.dataset.slideIndex, 10);
+//   block.dataset.activeSlide = slideIndex;
 
-  const slides = block.querySelectorAll('.carousel-slide');
+//   const slides = block.querySelectorAll('.carousel-slide');
 
-  slides.forEach((aSlide, idx) => {
-    aSlide.setAttribute('aria-hidden', idx !== slideIndex);
-    aSlide.querySelectorAll('a').forEach((link) => {
-      if (idx !== slideIndex) {
-        link.setAttribute('tabindex', '-1');
-      } else {
-        link.removeAttribute('tabindex');
-      }
-    });
-  });
+//   slides.forEach((aSlide, idx) => {
+//     aSlide.setAttribute('aria-hidden', idx !== slideIndex);
+//     aSlide.querySelectorAll('a').forEach((link) => {
+//       if (idx !== slideIndex) {
+//         link.setAttribute('tabindex', '-1');
+//       } else {
+//         link.removeAttribute('tabindex');
+//       }
+//     });
+//   });
 
-  const indicators = block.querySelectorAll('.carousel-slide-indicator');
-  indicators.forEach((indicator, idx) => {
-    if (idx !== slideIndex) {
-      indicator.querySelector('button').removeAttribute('disabled');
-    } else {
-      indicator.querySelector('button').setAttribute('disabled', 'true');
-    }
-  });
-}
+//   const indicators = block.querySelectorAll('.carousel-slide-indicator');
+//   indicators.forEach((indicator, idx) => {
+//     if (idx !== slideIndex) {
+//       indicator.querySelector('button').removeAttribute('disabled');
+//     } else {
+//       indicator.querySelector('button').setAttribute('disabled', 'true');
+//     }
+//   });
+// }
 
 function showSlide(block, slideIndex = 0) {
   const slides = block.querySelectorAll('.carousel-slide');
@@ -60,11 +60,11 @@ function bindEvents(block) {
     showSlide(block, parseInt(block.dataset.activeSlide, 10) + 1);
   });
 
-  const slideObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) updateActiveSlide(entry.target);
-    });
-  }, { threshold: 0.5 });
+//   const slideObserver = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) updateActiveSlide(entry.target);
+//     });
+//   }, { threshold: 0.5 });
   block.querySelectorAll('.carousel-slide').forEach((slide) => {
     slideObserver.observe(slide);
   });
