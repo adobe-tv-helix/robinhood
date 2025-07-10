@@ -1,5 +1,6 @@
 import { fetchPlaceholders } from '../../scripts/placeholders.js';
 
+let suppressObserver = false;
 function updateActiveSlide(slide) {
   const block = slide.closest('.carousel');
   const slideIndex = parseInt(slide.dataset.slideIndex, 10);
@@ -35,12 +36,23 @@ function showSlide(block, slideIndex = 0) {
   if (slideIndex >= slides.length) realSlideIndex = 0;
   const activeSlide = slides[realSlideIndex];
 
+  // custom added for robinhood
+  // suppress intersectionobserver temporarily
+  suppressObserver = true;
+
   activeSlide.querySelectorAll('a').forEach((link) => link.removeAttribute('tabindex'));
   block.querySelector('.carousel-slides').scrollTo({
     top: 0,
     left: activeSlide.offsetLeft,
     behavior: 'smooth',
   });
+
+  // custom added for robinhood
+  // Wait until scroll finishes; time may vary! 500ms is usually good for smooth scroll
+  setTimeout(() => {
+    updateActiveSlide(activeSlide);
+    suppressObserver = false;
+  }, 500);
 }
 
 function bindEvents(block) {
@@ -68,18 +80,26 @@ function bindEvents(block) {
 //       if (entry.isIntersecting) updateActiveSlide(entry.target);
 //     });
 //   }, { threshold: 0.5 });
+  // custom added for robinhood
+  // IntersectionObserver now respects the suppressObserver flag
     const slideObserver = new IntersectionObserver((entries) => {
+        if (suppressObserver) return; // <-- Ignore during button navigation
+
         // Only look for slides that are at least 50% visible
         const visibleSlides = entries.filter(entry => entry.isIntersecting);
-
-        if (visibleSlides.length) {
-            // Always activate the "leftmost" (smallest index) visible slide
-            const nextActive = visibleSlides
-            .map(entry => entry.target)
-            .sort((a, b) => parseInt(a.dataset.slideIndex) - parseInt(b.dataset.slideIndex))[0];
-            updateActiveSlide(nextActive);
+        visibleSlides.sort((a, b) => a.target.dataset.slideIndex - b.target.dataset.slideIndex);
+        if (visibleSlides.length > 0) {
+          updateActiveSlide(visibleSlides[0].target);
         }
+        // if (visibleSlides.length) {
+        //     // Always activate the "leftmost" (smallest index) visible slide
+        //     const nextActive = visibleSlides
+        //     .map(entry => entry.target)
+        //     .sort((a, b) => parseInt(a.dataset.slideIndex) - parseInt(b.dataset.slideIndex))[0];
+        //     updateActiveSlide(nextActive);
+        // }
     }, { threshold: 0.5 });
+    
   block.querySelectorAll('.carousel-slide').forEach((slide) => {
     slideObserver.observe(slide);
   });
