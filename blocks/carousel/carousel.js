@@ -73,7 +73,7 @@ function bindEvents(block) {
         const visibleSlides = entries.filter(entry => entry.isIntersecting);
 
         // Sort by their position in the DOM if needed
-        visibleSlides.sort((a, b) => a.target.dataset.index - b.target.dataset.index);
+        visibleSlides.sort((a, b) => a.target.dataset.slideIndex - b.target.dataset.slideIndex);
 
         if (visibleSlides.length > 0) {
             // Activate only the first visible slide (or another logic, e.g., nearest to the left)
