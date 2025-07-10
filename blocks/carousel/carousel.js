@@ -63,11 +63,23 @@ function bindEvents(block) {
     showSlide(block, parseInt(block.dataset.activeSlide, 10) + 1);
   });
 
-  const slideObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) updateActiveSlide(entry.target);
-    });
-  }, { threshold: 0.5 });
+//   const slideObserver = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) updateActiveSlide(entry.target);
+//     });
+//   }, { threshold: 0.5 });
+    const slideObserver = new IntersectionObserver((entries) => {
+        // Filter for entries that are intersecting (i.e., visible)
+        const visibleSlides = entries.filter(entry => entry.isIntersecting);
+
+        // Sort by their position in the DOM if needed
+        visibleSlides.sort((a, b) => a.target.dataset.index - b.target.dataset.index);
+
+        if (visibleSlides.length > 0) {
+            // Activate only the first visible slide (or another logic, e.g., nearest to the left)
+            updateActiveSlide(visibleSlides[0].target);
+        }
+    }, { threshold: 0.5 });
   block.querySelectorAll('.carousel-slide').forEach((slide) => {
     slideObserver.observe(slide);
   });
