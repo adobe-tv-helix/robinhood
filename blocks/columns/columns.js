@@ -12,28 +12,15 @@ export default function decorate(block) {
           // picture is only content in column
           picWrapper.classList.add('columns-img-col');
         }
-      }
-      const paraTag = col.querySelector('p');
-      if (paraTag) {
-        const parentDivTag = paraTag.closest('div');
-        if (parentDivTag) {
-          parentDivTag.classList.add('columns-para-col');
+      } else {
+        const paraTag = col.querySelector('p');
+        if (paraTag) {
+          const parentDivTag = paraTag.closest('div');
+          if (parentDivTag) {
+            parentDivTag.classList.add('columns-para-col');
+          }
         }
       }
-//       const paraParentDivTag = col.querySelector('p');
-//       console.log('para parent = ' + paraParentDivTag);
-//       if (paraParentDivTag) {
-//         const paraDivTag = paraParentDivTag.closest('div');
-//         const newParentTag = document.createElement('div');
-//         const preTags = col.querySelectorAll('pre');
-//         if(newParentTag) {
-//           newParentTag.classList.add('i-dont-know');
-//           preTags.forEach(function( p, index) {
-//             newParentTag.append(p);
-//           });
-//         }
-// paraDivTag.append(newParentTag);  
-//       }
     });
       // only move the <pre>fields</pre>, symbolizing the "form", in a column (footer) into each own div (to then style)
       // not the way to do this in production!
