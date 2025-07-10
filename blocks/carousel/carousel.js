@@ -143,7 +143,7 @@ export default async function decorate(block) {
     }
     console.log('row = ' + row + ' inner html = ' + row.innerHTML);
     row.childNodes.forEach(node => {
-        console.log('node = ' + node);
+        console.log('node = ' + node.textContent);
     });
     // row.remove();
   });
