@@ -114,7 +114,7 @@ export default async function decorate(block) {
     slideIndicatorsNav.setAttribute('aria-label', placeholders.carouselSlideControls || 'Carousel Slide Controls');
     slideIndicators = document.createElement('ol');
     slideIndicators.classList.add('carousel-slide-indicators');
-    slideIndicatorsNav.append(slideIndicators);
+    // slideIndicatorsNav.append(slideIndicators);
     block.append(slideIndicatorsNav);
 
     const slideNavButtons = document.createElement('div');
@@ -124,7 +124,8 @@ export default async function decorate(block) {
       <button type="button" class="slide-next" aria-label="${placeholders.nextSlide || 'Next Slide'}"></button>
     `;
 
-    container.append(slideNavButtons);
+    slideIndicatorsNav.append(slideNavButtons);
+    // container.append(slideNavButtons);
   }
 
   rows.forEach((row, idx) => {
@@ -138,7 +139,7 @@ export default async function decorate(block) {
       indicator.innerHTML = `<button type="button" aria-label="${placeholders.showSlide || 'Show Slide'} ${idx + 1} ${placeholders.of || 'of'} ${rows.length}"></button>`;
       slideIndicators.append(indicator);
     }
-    console.log('row = ' + row);
+    console.log('row = ' + row + ' inner html = ' + row.innerHTML);
     // row.remove();
   });
 
