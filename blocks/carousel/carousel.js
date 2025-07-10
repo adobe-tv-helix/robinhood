@@ -127,19 +127,19 @@ export default async function decorate(block) {
     container.append(slideNavButtons);
   }
 
-  rows.forEach((row, idx) => {
-    const slide = createSlide(row, idx, carouselId);
-    slidesWrapper.append(slide);
+//   rows.forEach((row, idx) => {
+//     const slide = createSlide(row, idx, carouselId);
+//     slidesWrapper.append(slide);
 
-    if (slideIndicators) {
-      const indicator = document.createElement('li');
-      indicator.classList.add('carousel-slide-indicator');
-      indicator.dataset.targetSlide = idx;
-      indicator.innerHTML = `<button type="button" aria-label="${placeholders.showSlide || 'Show Slide'} ${idx + 1} ${placeholders.of || 'of'} ${rows.length}"></button>`;
-      slideIndicators.append(indicator);
-    }
-    row.remove();
-  });
+//     if (slideIndicators) {
+//       const indicator = document.createElement('li');
+//       indicator.classList.add('carousel-slide-indicator');
+//       indicator.dataset.targetSlide = idx;
+//       indicator.innerHTML = `<button type="button" aria-label="${placeholders.showSlide || 'Show Slide'} ${idx + 1} ${placeholders.of || 'of'} ${rows.length}"></button>`;
+//       slideIndicators.append(indicator);
+//     }
+//     row.remove();
+//   });
 
   container.append(slidesWrapper);
   block.prepend(container);
