@@ -90,6 +90,9 @@
   background-color: var(--text-color);
 }
 
+.carousel .carousel-navigation-buttons-rh {
+    justify-content: right;
+}
 .carousel .carousel-navigation-buttons, .carousel .carousel-navigation-buttons-rh {
   /*position: absolute;*/
   top: 50%;
@@ -98,7 +101,8 @@
   right: 12px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
+  justify-content: right; /* CUSTOM ADDED FOR ROBINHOOD */
   z-index: 1;
 }
 
