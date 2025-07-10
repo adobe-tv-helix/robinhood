@@ -90,7 +90,7 @@
   background-color: var(--text-color);
 }
 
-.carousel .carousel-navigation-buttons {
+.carousel .carousel-navigation-buttons, .carousel .carousel-navigation-buttons-rh {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -103,7 +103,7 @@
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-.carousel .carousel-navigation-buttons button {
+.carousel .carousel-navigation-buttons button, .carouse .carousel-navigation-buttons-rh button {
   position: relative;
   width: 44px;
   height: 44px;
@@ -116,12 +116,15 @@
 }
 
 .carousel .carousel-navigation-buttons button:hover,
-.carousel .carousel-navigation-buttons button:focus-visible {
-  /*background-color: rgb(19 19 19 / 75%);*/
-  background-color: transparent; /* CUSTOM ADD FOR ROBINHOOD */
+.carousel .carousel-navigation-buttons button:focus-visible,
+.carousel .carousel-navigation-buttons-rh button:hover,
+.carousel .carousel-navigation-buttons-rh button:focus-visible {
+  background-color: rgb(19 19 19 / 75%);
+  /*background-color: transparent;*/ /* CUSTOM ADD FOR ROBINHOOD */
 }
 
-.carousel .carousel-navigation-buttons button::after {
+.carousel .carousel-navigation-buttons button::after,
+.carousel .carousel-navigation-buttons-rh button::after {
   display: block;
   content: '';
   border: 2px solid;
@@ -136,13 +139,15 @@
   color: white; /* CUSTOM ADD FOR ROBINHOOD */
 }
 
-.carousel .carousel-navigation-buttons button.slide-next::after {
+.carousel .carousel-navigation-buttons button.slide-next::after,
+.carousel .carousel-navigation-buttons-rh button.slide-next::after {
   transform: translate(-50%, -50%) rotate(45deg);
   left: calc(50% - 2px);
 }
 
 @media (width >= 600px) {
-  .carousel .carousel-navigation-buttons {
+  .carousel .carousel-navigation-buttons,
+  .carousel .carousel-navigation-buttons-rh {
     left: 24px;
     right: 24px;
   }
