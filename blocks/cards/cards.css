@@ -6,11 +6,13 @@
   grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
   grid-gap: 24px;
 }
-
+/* REMOVED FOR ROBINHOOD */
+/*
 .cards > ul > li {
   border: 1px solid #dadada;
-  /*background-color: var(--background-color);*/ /* REMOVED FOR ROBINHOOD */
+  background-color: var(--background-color);
 }
+  */
 
 .cards .cards-card-body {
   margin: 16px;
@@ -24,4 +26,9 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+/* CUSTOM ADD FOR ROBINHOOD */
+main > .section > .cards-wrapper {
+    max-width: 97% !important;
+    padding: 0 !important;
 }

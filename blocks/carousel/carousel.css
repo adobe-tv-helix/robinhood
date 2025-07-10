@@ -166,7 +166,7 @@
     --slide-content-width: auto;
   }
 }
-
+/* CUSTOM ADD FOR ROBINHOOD */
 main > .section > .carousel-wrapper {
     max-width: 97% !important;
     padding: 0 !important;
