@@ -131,13 +131,13 @@ export default async function decorate(block) {
     const slide = createSlide(row, idx, carouselId);
     slidesWrapper.append(slide);
 
-//     if (slideIndicators) {
-//       const indicator = document.createElement('li');
+    if (slideIndicators) {
+      const indicator = document.createElement('li');
 //       indicator.classList.add('carousel-slide-indicator');
 //       indicator.dataset.targetSlide = idx;
 //       indicator.innerHTML = `<button type="button" aria-label="${placeholders.showSlide || 'Show Slide'} ${idx + 1} ${placeholders.of || 'of'} ${rows.length}"></button>`;
 //       slideIndicators.append(indicator);
-//     }
+    }
 //     row.remove();
   });
 
