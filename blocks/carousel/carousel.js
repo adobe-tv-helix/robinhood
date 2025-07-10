@@ -3,6 +3,7 @@ import { fetchPlaceholders } from '../../scripts/placeholders.js';
 function updateActiveSlide(slide) {
   const block = slide.closest('.carousel');
   const slideIndex = parseInt(slide.dataset.slideIndex, 10);
+console.log('in active slide, slide index = ' + slideIndex);
   block.dataset.activeSlide = slideIndex;
 
   const slides = block.querySelectorAll('.carousel-slide');
