@@ -31,7 +31,8 @@
   position: relative;
   width: 100%;
   /*min-height: min(50vw, calc(100dvh - var(--header-height)));*/
-  min-height: 372px;
+  min-height: 400px;
+  max-height: 457px;
   margin-right: 15px;   /* CUSTOM ADDED FOR ROBINHOOD */
 }
 
