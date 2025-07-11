@@ -172,7 +172,6 @@ export default async function decorate(block) {
   let idxCounts = {}; // Or: new Map();
   let tempIdx = 0;
   rows.forEach((row, idx) => {
-    tempIdx = idx;
     // Count how many times we've seen `idx` so far
     if (!idxCounts[idx]) {
       idxCounts[idx] = 1; // First occurrence
@@ -201,7 +200,7 @@ export default async function decorate(block) {
     if (tempIdx === idx) {
       row.remove();
     }
-
+    tempIdx = idx;
     // if (!seenIdxs.has(idx)) {
     //   // This is the FIRST time we've seen this idx, so remove it
     //   row.remove();
