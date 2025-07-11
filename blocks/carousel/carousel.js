@@ -169,8 +169,8 @@ export default async function decorate(block) {
     // container.append(slideNavButtons);
   }
 
+  const tempIdx = 0;
   rows.forEach((row, idx) => {
-    const tempIdx = idx;
     const slide = createSlide(row, idx, carouselId);
     slidesWrapper.append(slide);
 
@@ -189,6 +189,7 @@ export default async function decorate(block) {
     if (tempIdx == idx) {
       row.remove();
     }
+    tempIdx = idx;
     //  row.remove();
   });
 
