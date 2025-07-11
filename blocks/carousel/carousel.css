@@ -174,5 +174,5 @@ main > .section > .carousel-wrapper {
     padding: 0 !important;
 }
 li[data-prop="carousel_image"] {
-    display: none;
+    display: none !important;
 }
