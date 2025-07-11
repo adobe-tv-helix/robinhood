@@ -185,9 +185,7 @@ export default async function decorate(block) {
     row.childNodes.forEach(node => {
         console.log('row = ' + row + ', inner html = ' + row.innerHTML + ', index = ' + idx + ', node = ' + node.textContent);
     });
-    for (const child of row.children) {
-      console.log('child = ' + child);
-    }
+    printAllChildNodes(row);
     if (tempIdx == idx) {
       row.remove();
     }
@@ -200,4 +198,15 @@ export default async function decorate(block) {
   if (!isSingleSlide) {
     bindEvents(block);
   }
+}
+
+function printAllChildNodes(node, depth = 0) {
+    // Print current node's details (indent to show depth)
+    console.log(
+        ' '.repeat(depth*2) + 
+        'Node: ' + node.nodeName + 
+        ', Text: ' + (node.textContent && node.textContent.trim())
+    );
+    // Recursively process each child node
+    node.childNodes.forEach(child => printAllChildNodes(child, depth + 1));
 }
