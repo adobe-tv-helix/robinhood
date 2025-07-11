@@ -138,7 +138,9 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Single Carousel",
-                  "model": "carousel-single"
+                  "model": "carousel-single",
+                  "carousel_image": "/content/dam/robinhood/placeholder.jpg",
+                  "carousel_imageAlt": "placeholder alt text"
                 }
               }
             }
