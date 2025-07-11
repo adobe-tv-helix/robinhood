@@ -1,5 +1,5 @@
 import { fetchPlaceholders } from '../../scripts/placeholders.js';
-import { moveInstrumentation } from '../../scripts/scripts.js';
+import { moveInstrumentation, isAuthorEnvironment } from '../../scripts/scripts.js';
 
 let suppressObserver = false; // custom added for robinhood
 function updateActiveSlide(slide) {
@@ -189,11 +189,13 @@ export default async function decorate(block) {
 
     const slide = createSlide(row, idx, carouselId);
     // custom add for robinhood
-    if (classes && classes.length > 0) {
+    if (classes && classes.length > 0 && slide && slide.classList && isAuthorEnvironment) {
       slide.classList.add(...classes);
     }
     console.log(row.querySelector(':scope > div'));
-    moveInstrumentation(row, slide);
+    if (isAuthorEnvironment) {
+      moveInstrumentation(row, slide);
+    }
     // end custom add for robinhood
     slidesWrapper.append(slide);
 
