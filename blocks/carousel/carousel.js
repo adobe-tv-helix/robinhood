@@ -194,9 +194,9 @@ export default async function decorate(block) {
     });
     // printAllChildNodes(row);
     // Only remove the SECOND occurrence of a repeated idx
-    if (idxCounts[idx] === 2) {
-      row.remove();
-    }
+    // if (idxCounts[idx] === 2) {
+    //   row.remove();
+    // }
     if (tempIdx === 0 || tempIdx === idx) {
       row.remove();
     }
