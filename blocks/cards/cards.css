@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(345px, 1fr)); /*repeat(auto-fill, minmax(257px, 1fr));*/
   grid-gap: 24px;
 }
 /* REMOVED FOR ROBINHOOD */
@@ -31,4 +31,11 @@
 main > .section > .cards-wrapper {
     max-width: 97% !important;
     padding: 0 !important;
+}
+.cards-wrapper .cards {
+  /*display: flex;
+  flex-wrap: wrap;*/
+  margin-right: -10px;
+  margin-left: -10px;
+  padding: 60px 10px 40px 10px;
 }
