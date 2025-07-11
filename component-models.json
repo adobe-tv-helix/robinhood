@@ -185,6 +185,13 @@
         "name": "carousel_image",
         "label": "Carousel Image",
         "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "carousel_imageAlt",
+        "label": "Carousel Image Alt",
+        "value": ""
       }
     ]
   },

@@ -1,4 +1,5 @@
 import { fetchPlaceholders } from '../../scripts/placeholders.js';
+import { moveInstrumentation } from '../../scripts/scripts.js';
 
 let suppressObserver = false; // custom added for robinhood
 function updateActiveSlide(slide) {
@@ -180,7 +181,20 @@ export default async function decorate(block) {
       idxCounts[idx] += 1; // Subsequent occurrence
       console.log('second occurrence = ' + idxCounts[idx]);
     }
+    const classes = row
+      .querySelector(':scope > div')
+      ?.textContent?.split(',')
+      ?.map((c) => c.trim());
+    row.querySelector(':scope > div')?.remove();
+
     const slide = createSlide(row, idx, carouselId);
+    // custom add for robinhood
+    if (classes && classes.length > 0) {
+      slide.classList.add(...classes);
+    }
+    console.log(row.querySelector(':scope > div'));
+    moveInstrumentation(row, slide);
+    // end custom add for robinhood
     slidesWrapper.append(slide);
 
     if (slideIndicators) {
@@ -197,7 +211,7 @@ export default async function decorate(block) {
     // printAllChildNodes(row);
     // Only remove the SECOND occurrence of a repeated idx
     // if (idxCounts[idx] === 2) {
-    //  row.remove();
+     row.remove();
     // }
     // if (!seenIdxs.has(idx)) {
     //   // This is the FIRST time we've seen this idx, so remove it
