@@ -175,8 +175,10 @@ export default async function decorate(block) {
     // Count how many times we've seen `idx` so far
     if (!idxCounts[idx]) {
       idxCounts[idx] = 1; // First occurrence
+      console.log('first occurrence = ' + idxCounts[idx]);
     } else {
       idxCounts[idx] += 1; // Subsequent occurrence
+      console.log('second occurrence = ' + idxCounts[idx]);
     }
     const slide = createSlide(row, idx, carouselId);
     slidesWrapper.append(slide);
@@ -194,13 +196,9 @@ export default async function decorate(block) {
     });
     // printAllChildNodes(row);
     // Only remove the SECOND occurrence of a repeated idx
-    // if (idxCounts[idx] === 2) {
-    //   row.remove();
-    // }
-    if (tempIdx !== idx) {
+    if (idxCounts[idx] === 2) {
       row.remove();
     }
-    tempIdx = idx;
     // if (!seenIdxs.has(idx)) {
     //   // This is the FIRST time we've seen this idx, so remove it
     //   row.remove();
