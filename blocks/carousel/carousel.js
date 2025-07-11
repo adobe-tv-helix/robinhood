@@ -170,6 +170,7 @@ export default async function decorate(block) {
   }
 
   rows.forEach((row, idx) => {
+    const tempIdx = idx;
     const slide = createSlide(row, idx, carouselId);
     slidesWrapper.append(slide);
 
@@ -184,7 +185,10 @@ export default async function decorate(block) {
     row.childNodes.forEach(node => {
         console.log('row = ' + row + ', inner html = ' + row.innerHTML + ', index = ' + idx + ', node = ' + node.textContent);
     });
-     row.remove();
+    if (tempIdx == idx) {
+      row.remove();
+    }
+    //  row.remove();
   });
 
   container.append(slidesWrapper);
