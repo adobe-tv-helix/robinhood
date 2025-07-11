@@ -173,3 +173,6 @@ main > .section > .carousel-wrapper {
     max-width: 97% !important;
     padding: 0 !important;
 }
+li[data-prop="carousel_image"] {
+    display: none;
+}
