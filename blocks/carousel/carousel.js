@@ -185,7 +185,7 @@ export default async function decorate(block) {
     row.childNodes.forEach(node => {
         console.log('row = ' + row + ', inner html = ' + row.innerHTML + ', index = ' + idx + ', node = ' + node.textContent);
     });
-    printAllChildNodes(row);
+    // printAllChildNodes(row);
     if (tempIdx == idx) {
       row.remove();
     }
