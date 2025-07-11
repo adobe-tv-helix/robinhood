@@ -169,8 +169,14 @@ export default async function decorate(block) {
     // container.append(slideNavButtons);
   }
 
-  let seenIdxs = new Set();
+  let idxCounts = {}; // Or: new Map();
   rows.forEach((row, idx) => {
+    // Count how many times we've seen `idx` so far
+    if (!idxCounts[idx]) {
+      idxCounts[idx] = 1; // First occurrence
+    } else {
+      idxCounts[idx] += 1; // Subsequent occurrence
+    }
     const slide = createSlide(row, idx, carouselId);
     slidesWrapper.append(slide);
 
@@ -186,12 +192,16 @@ export default async function decorate(block) {
         console.log('row = ' + row + ', inner html = ' + row.innerHTML + ', index = ' + idx + ', node = ' + node.textContent);
     });
     // printAllChildNodes(row);
-    if (!seenIdxs.has(idx)) {
-      // This is the FIRST time we've seen this idx, so remove it
+    // Only remove the SECOND occurrence of a repeated idx
+    if (idxCounts[idx] === 2) {
       row.remove();
-      seenIdxs.add(idx);
-      // Now the Set remembers that this idx has been handled!
     }
+    // if (!seenIdxs.has(idx)) {
+    //   // This is the FIRST time we've seen this idx, so remove it
+    //   row.remove();
+    //   seenIdxs.add(idx);
+    //   // Now the Set remembers that this idx has been handled!
+    // }
     //  row.remove();
   });
 
