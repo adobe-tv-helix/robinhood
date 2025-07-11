@@ -169,7 +169,7 @@ export default async function decorate(block) {
     // container.append(slideNavButtons);
   }
 
-  let tempIdx = 0;
+  let seenIdxs = new Set();
   rows.forEach((row, idx) => {
     const slide = createSlide(row, idx, carouselId);
     slidesWrapper.append(slide);
@@ -186,10 +186,12 @@ export default async function decorate(block) {
         console.log('row = ' + row + ', inner html = ' + row.innerHTML + ', index = ' + idx + ', node = ' + node.textContent);
     });
     // printAllChildNodes(row);
-    if (tempIdx == idx) {
+    if (!seenIdxs.has(idx)) {
+      // This is the FIRST time we've seen this idx, so remove it
       row.remove();
+      seenIdxs.add(idx);
+      // Now the Set remembers that this idx has been handled!
     }
-    tempIdx = idx;
     //  row.remove();
   });
 
