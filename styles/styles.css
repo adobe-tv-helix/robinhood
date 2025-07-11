@@ -368,3 +368,7 @@ main > .events-tabs > div, main > .events-gallery > div {
   z-index: 2;
   transition: .2s;
 }
+/* NEED TO PUT THIS HERE BECAUSE IT'S FOR AEM AUTHOR ONLY */
+li[data-prop="carousel_image"] {
+    display: none !important;
+}
