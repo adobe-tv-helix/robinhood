@@ -189,7 +189,7 @@ export default async function decorate(block) {
     }
 // TODO debugging
     row.childNodes.forEach(node => {
-        console.log('row = ' + row + ', inner html = ' + row.innerHTML + ', index = ' + idx + ', node = ' + node.textContent);
+        console.log('row = ' + row + ', inner html = ' + row.innerHTML + ', index = ' + idx + ', node = ' + node.textContent + ', occurrence = ' + idxCounts[idx]);
     });
     // printAllChildNodes(row);
     // Only remove the SECOND occurrence of a repeated idx
