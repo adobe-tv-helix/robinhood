@@ -22,7 +22,7 @@
 
 .carousel .carousel-slide {
   /*flex: 0 0 100%;*/
-  flex: 0 0 100%;
+  flex: 0 0 50%;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
