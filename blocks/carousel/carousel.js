@@ -189,9 +189,9 @@ export default async function decorate(block) {
 
     const slide = createSlide(row, idx, carouselId);
     // custom add for robinhood
-    if (classes && classes.length > 0 && slide && slide.classList && isAuthorEnvironment) {
-      slide.classList.add(...classes);
-    }
+    // if (classes && classes.length > 0 && slide && slide.classList && isAuthorEnvironment) {
+    //   slide.classList.add(...classes);
+    // }
     console.log(row.querySelector(':scope > div'));
     if (isAuthorEnvironment) {
       moveInstrumentation(row, slide);
