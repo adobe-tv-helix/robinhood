@@ -174,18 +174,18 @@ export default async function decorate(block) {
   let tempIdx = 0;
   rows.forEach((row, idx) => {
     // Count how many times we've seen `idx` so far
-    if (!idxCounts[idx]) {
-      idxCounts[idx] = 1; // First occurrence
-      console.log('first occurrence = ' + idxCounts[idx]);
-    } else {
-      idxCounts[idx] += 1; // Subsequent occurrence
-      console.log('second occurrence = ' + idxCounts[idx]);
-    }
-    const classes = row
-      .querySelector(':scope > div')
-      ?.textContent?.split(',')
-      ?.map((c) => c.trim());
-    row.querySelector(':scope > div')?.remove();
+    // if (!idxCounts[idx]) {
+    //   idxCounts[idx] = 1; // First occurrence
+    //   console.log('first occurrence = ' + idxCounts[idx]);
+    // } else {
+    //   idxCounts[idx] += 1; // Subsequent occurrence
+    //   console.log('second occurrence = ' + idxCounts[idx]);
+    // }
+    // const classes = row
+    //   .querySelector(':scope > div')
+    //   ?.textContent?.split(',')
+    //   ?.map((c) => c.trim());
+    // row.querySelector(':scope > div')?.remove();
 
     const slide = createSlide(row, idx, carouselId);
     // custom add for robinhood
