@@ -197,7 +197,7 @@ export default async function decorate(block) {
     // if (idxCounts[idx] === 2) {
     //   row.remove();
     // }
-    if (tempIdx === idx) {
+    if (tempIdx !== idx) {
       row.remove();
     }
     tempIdx = idx;
