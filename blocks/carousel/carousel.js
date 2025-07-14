@@ -191,7 +191,7 @@ export default async function decorate(block) {
     }
 // TODO debugging
     row.childNodes.forEach(node => {
-        console.log('row = ' + row + ', inner html = ' + row.innerHTML + ', index = ' + idx + ', node = ' + node.textContent + ', occurrence = ' + idxCounts[idx]);
+        console.log('row = ' + row + ', inner html = ' + row.innerHTML + ', index = ' + idx + ', node = ' + node.textContent);
     });
      row.remove();
   });
