@@ -5,7 +5,7 @@ let suppressObserver = false; // custom added for robinhood
 function updateActiveSlide(slide) {
   const block = slide.closest('.carousel');
   const slideIndex = parseInt(slide.dataset.slideIndex, 10);
-console.log('in active slide, slide index = ' + slideIndex);
+
   block.dataset.activeSlide = slideIndex;
 
   const slides = block.querySelectorAll('.carousel-slide');
@@ -93,13 +93,6 @@ function bindEvents(block) {
         if (visibleSlides.length > 0) {
           updateActiveSlide(visibleSlides[0].target);
         }
-        // if (visibleSlides.length) {
-        //     // Always activate the "leftmost" (smallest index) visible slide
-        //     const nextActive = visibleSlides
-        //     .map(entry => entry.target)
-        //     .sort((a, b) => parseInt(a.dataset.slideIndex) - parseInt(b.dataset.slideIndex))[0];
-        //     updateActiveSlide(nextActive);
-        // }
     }, { threshold: 0.5 });
     // end custom added for robinhood
   block.querySelectorAll('.carousel-slide').forEach((slide) => {
@@ -170,17 +163,7 @@ export default async function decorate(block) {
     // container.append(slideNavButtons);
   }
 
-  let idxCounts = {}; // Or: new Map();
-  let tempIdx = 0;
   rows.forEach((row, idx) => {
-    // Count how many times we've seen `idx` so far
-    // if (!idxCounts[idx]) {
-    //   idxCounts[idx] = 1; // First occurrence
-    //   console.log('first occurrence = ' + idxCounts[idx]);
-    // } else {
-    //   idxCounts[idx] += 1; // Subsequent occurrence
-    //   console.log('second occurrence = ' + idxCounts[idx]);
-    // }
     // const classes = row
     //   .querySelector(':scope > div')
     //   ?.textContent?.split(',')
@@ -210,18 +193,7 @@ export default async function decorate(block) {
     row.childNodes.forEach(node => {
         console.log('row = ' + row + ', inner html = ' + row.innerHTML + ', index = ' + idx + ', node = ' + node.textContent + ', occurrence = ' + idxCounts[idx]);
     });
-    // printAllChildNodes(row);
-    // Only remove the SECOND occurrence of a repeated idx
-    // if (idxCounts[idx] === 2) {
      row.remove();
-    // }
-    // if (!seenIdxs.has(idx)) {
-    //   // This is the FIRST time we've seen this idx, so remove it
-    //   row.remove();
-    //   seenIdxs.add(idx);
-    //   // Now the Set remembers that this idx has been handled!
-    // }
-    //  row.remove();
   });
 
   container.append(slidesWrapper);
@@ -230,15 +202,4 @@ export default async function decorate(block) {
   if (!isSingleSlide) {
     bindEvents(block);
   }
-}
-
-function printAllChildNodes(node, depth = 0) {
-    // Print current node's details (indent to show depth)
-    console.log(
-        ' '.repeat(depth*2) + 
-        'Node: ' + node.nodeName + 
-        ', Text: ' + (node.textContent && node.textContent.trim())
-    );
-    // Recursively process each child node
-    node.childNodes.forEach(child => printAllChildNodes(child, depth + 1));
 }
