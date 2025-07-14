@@ -168,7 +168,7 @@ export default async function decorate(block) {
       .querySelector(':scope > div')
       ?.textContent?.split(',')
       ?.map((c) => c.trim());
-    row.querySelector(':scope > div')?.remove();
+    // row.querySelector(':scope > div')?.remove();
 
     const slide = createSlide(row, idx, carouselId);
     console.log('classes = ' + classes + ', slide = ' + slide + ', slide.classList = ' + slide.classList);
