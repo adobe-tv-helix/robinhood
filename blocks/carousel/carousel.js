@@ -164,13 +164,14 @@ export default async function decorate(block) {
   }
 
   rows.forEach((row, idx) => {
-    // const classes = row
-    //   .querySelector(':scope > div')
-    //   ?.textContent?.split(',')
-    //   ?.map((c) => c.trim());
-    // row.querySelector(':scope > div')?.remove();
+    const classes = row
+      .querySelector(':scope > div')
+      ?.textContent?.split(',')
+      ?.map((c) => c.trim());
+    row.querySelector(':scope > div')?.remove();
 
     const slide = createSlide(row, idx, carouselId);
+    console.log('classes = ' + classes + ', slide = ' + slide + ', slide.classList = ' + slide.classList);
     // custom add for robinhood
     // if (classes && classes.length > 0 && slide && slide.classList && isAuthorEnvironment) {
     //   slide.classList.add(...classes);
