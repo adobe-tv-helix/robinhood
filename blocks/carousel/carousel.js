@@ -155,6 +155,7 @@ export default async function decorate(block) {
       <button type="button" class="slide-next" aria-label="${placeholders.nextSlide || 'Next Slide'}"></button>
     `;
 
+    // custom add for robinhood to add prev/next button at bottom instead of overlaying at edges of slide image
     slideIndicatorsNav.append(slideNavButtons);
     block.append(slideIndicatorsNav);
 
@@ -164,19 +165,9 @@ export default async function decorate(block) {
   }
 
   rows.forEach((row, idx) => {
-    const classes = row
-      .querySelector(':scope > div')
-      ?.textContent?.split(',')
-      ?.map((c) => c.trim());
-    // row.querySelector(':scope > div')?.remove();
-
     const slide = createSlide(row, idx, carouselId);
-    console.log('classes = ' + classes + ', classes length = ' + classes.length + ', slide = ' + slide + ', slide.classList = ' + slide.classList);
-    // custom add for robinhood
-    // if (classes && classes.length > 0 && slide && slide.classList && isAuthorEnvironment) {
-    //   slide.classList.add(...classes);
-    // }
-    console.log(row.querySelector(':scope > div'));
+
+    // custom added for robinhood
     if (isAuthorEnvironment) {
       moveInstrumentation(row, slide);
     }
