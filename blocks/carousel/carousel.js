@@ -40,6 +40,7 @@ function showSlide(block, slideIndex = 0) {
   // custom added for robinhood
   // suppress intersectionobserver temporarily
   suppressObserver = true;
+  // end custom add for robinhood
 
   activeSlide.querySelectorAll('a').forEach((link) => link.removeAttribute('tabindex'));
   block.querySelector('.carousel-slides').scrollTo({
@@ -181,10 +182,6 @@ export default async function decorate(block) {
       indicator.innerHTML = `<button type="button" aria-label="${placeholders.showSlide || 'Show Slide'} ${idx + 1} ${placeholders.of || 'of'} ${rows.length}"></button>`;
       slideIndicators.append(indicator);
     }
-// TODO debugging
-    row.childNodes.forEach(node => {
-        console.log('row = ' + row + ', inner html = ' + row.innerHTML + ', index = ' + idx + ', node = ' + node.textContent);
-    });
      row.remove();
   });
 
